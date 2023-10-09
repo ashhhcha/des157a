@@ -1,0 +1,84 @@
+header{
+    text-align: center;
+    justify-content: center;
+}
+
+.details {
+    display: flex;
+    width: 90%;
+    /* justify-content: space-between; */
+}
+
+.details p{
+    margin: unset;
+}
+
+.details p:last-child{
+    margin-left: auto;
+}
+
+ul{
+    padding: unset;
+}
+
+ul a{
+    text-decoration: none;
+    color: white;
+}
+
+nav ul {
+    background-color: rgb(78, 78, 78);
+    border-radius: 8px;
+    margin-bottom: 1em;
+    padding: 10px;
+}
+
+section{
+    padding:2em;
+    margin-left: 2em;
+    margin-right: 2em;
+    margin-top: 1em;
+    border: solid rgb(52, 52, 52);
+    justify-content: center;
+}
+
+h2{
+    text-transform:uppercase;
+    font-family: Fragment Mono, sans-serif;
+    letter-spacing: 2px;
+}
+
+h1{
+    text-transform:uppercase;
+    font-family: Fragment Mono, sans-serif;
+    letter-spacing: 3px;
+    width: fit-content;
+    display: inline-block;
+}
+
+p, a{
+    font-family: Work Sans, san-serif;
+    letter-spacing: 1px;
+}
+
+footer{
+    text-align: center;
+    margin: 1em;
+}
+
+footer p{
+    margin: unset;
+    line-height: 1.5em;
+}
+
+body{
+    background: rgb(245,251,251);
+    background: linear-gradient(0deg, rgba(245,251,251,1) 5%, rgba(132,206,245,1) 100%);
+}
+
+@media screen and (min-width: 500px){
+    .projects{
+        display: flex;
+        justify-content: center;
+    }
+}
