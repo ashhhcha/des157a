@@ -1,12 +1,19 @@
 header{
     text-align: center;
     justify-content: center;
+    height: 250px;
 }
 
-.details {
-    display: flex;
-    width: 90%;
-    /* justify-content: space-between; */
+.details { 
+    max-width: 707px;
+    margin:auto;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.details div{
+    display: flex; 
+    justify-content: space-between;
 }
 
 .details p{
@@ -15,70 +22,96 @@ header{
 
 .details p:last-child{
     margin-left: auto;
+    justify-content: center;
 }
 
 ul{
     padding: unset;
 }
 
-ul a{
+ul li{
+    list-style-type: none;;
+}
+
+li a{
     text-decoration: none;
     color: white;
 }
 
-nav ul {
+nav ul li{
     background-color: rgb(78, 78, 78);
     border-radius: 8px;
     margin-bottom: 1em;
-    padding: 10px;
+    padding: 8px;
+    margin: 8px;
+    transition: 1s ease;
+}
+
+nav ul li:hover{
+    transform: scale(1.15);
 }
 
 section{
-    padding:2em;
-    margin-left: 2em;
-    margin-right: 2em;
-    margin-top: 1em;
+    padding:1em 2em 1em 2em;
+    margin-left: 1em;
+    margin-right: 1em;
     border: solid rgb(52, 52, 52);
-    justify-content: center;
+    width: auto;
+}
+
+#exp{
+    margin-top:1em;
 }
 
 h2{
     text-transform:uppercase;
-    font-family: Fragment Mono, sans-serif;
+    font-family: "Fragment Mono", sans-serif;
     letter-spacing: 2px;
+    margin:0px 8px 8px 8px;
 }
 
 h1{
     text-transform:uppercase;
-    font-family: Fragment Mono, sans-serif;
+    font-family: "Fragment Mono", sans-serif;
     letter-spacing: 3px;
-    width: fit-content;
-    display: inline-block;
+    margin-top: unset;
 }
 
 p, a{
-    font-family: Work Sans, san-serif;
+    font-family: "Work Sans", san-serif;
     letter-spacing: 1px;
+}
+
+a{
+    font-size: 14px;
 }
 
 footer{
     text-align: center;
-    margin: 1em;
+    margin: 8px;
 }
 
 footer p{
     margin: unset;
-    line-height: 1.5em;
+    line-height: 1.25em;
 }
 
 body{
-    background: rgb(245,251,251);
-    background: linear-gradient(0deg, rgba(245,251,251,1) 5%, rgba(132,206,245,1) 100%);
+    background-image: url(images/background.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: unset;
 }
 
 @media screen and (min-width: 500px){
     .projects{
         display: flex;
         justify-content: center;
+    }
+
+    section{
+        width: 18%;
     }
 }
