@@ -5,9 +5,8 @@ header{
 }
 
 .details { 
-    max-width: 707px;
+    max-width: 860px;
     margin:auto;
-    align-items: center;
     padding-top: 80px;
 }
 
@@ -75,6 +74,7 @@ h1{
     font-family: "Fragment Mono", sans-serif;
     letter-spacing: 3px;
     margin-top: unset;
+    font-size: 40px;
 }
 
 p, a{
