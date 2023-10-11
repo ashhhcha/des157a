@@ -51,7 +51,7 @@ nav ul li:hover{
     transform: scale(1.15);
 }
 
-section{
+article{
     padding:1em 2em 1em 2em;
     margin-left: 1em;
     margin-right: 1em;
@@ -97,13 +97,20 @@ footer p{
 }
 
 body{
-    background-image: url(images/background.jpg);
+    /* background-image: url(images/background.jpg); */
     width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     margin: unset;
+    animation: animatedBack 3s linear alternate infinite;
 }
+
+@keyframes animatedBack{
+    0% {background-image: url(images/background.jpg);}
+    100% {background-image: url(images/background2.png);}
+}
+
 
 @media screen and (min-width: 500px){
     .projects{
@@ -111,7 +118,7 @@ body{
         justify-content: center;
     }
 
-    section{
+    article{
         width: 18%;
     }
 }
