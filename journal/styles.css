@@ -33,7 +33,8 @@ p, a{
 
 section{
     display: flex;
-
+    margin:auto;
+    width: 85%;
 }
 
 .art1{
