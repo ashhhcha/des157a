@@ -2,19 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experiment 2</title>
 </head>
 <body>
 
-    <h1>Experiment 2</h1>
-    
+
     <script>
+      var ask = prompt ("provide your name", "");
+      var foods = ["cheese", "fruit", "chicken", "dessert", "candy"];
 
-      
+      function hello(name){
 
-        
+        var greeting;
+
+        if (name == '' || name == null ){
+            greeting = "<h1>you didn't give me a name</h1>";
+          }
+        else {
+          greeting = `<h1>Hello ${name}, and welcome!</h1>`;
+        }
+
+        return greeting;
+      }
+
+
+      function random (min, max) {
+        return Math.floor((max-min+1)*Math.random()) + min;
+      } 
+
+      function hospitality(name, foods){
+        document.write(hello(name));
+        var randomPick;
+        var randomPick = foods[random(0, foods.length-1)];
+
+      var help = document.getElementsByTagName ("h2").innerHTML;
+      document.write(`<h2>${name}, would you like some ${randomPick}?</h2>`);
+      }
+
+      hospitality(ask, foods);
 
     </script>
-
 </body>
 </html>
