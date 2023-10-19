@@ -5,6 +5,8 @@ h1, h2, date{
 h1{
     text-align: center;
     padding: 2em;
+    margin:unset;
+
 }
 
 h2{
@@ -34,6 +36,7 @@ p, a{
 section{
     display: flex;
     margin:auto;
+    margin-top: 20px;
     width: 85%;
 }
 
@@ -50,4 +53,12 @@ section{
 .art1 h2{
     margin-top: 2em;
     font-size: 30px;
+}
+
+header{
+    background-color: beige;
+}
+
+body{
+    margin: unset;
 }
