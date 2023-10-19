@@ -43,7 +43,11 @@ section{
 .art1{
     width: 45%;
     margin: auto;
-    padding: 1em;
+    padding: 3em;
+
+    margin-top: 2em;
+    background-color: rgb(245, 236, 220);
+
 }
 
 .art1 p{
@@ -51,7 +55,6 @@ section{
 }
 
 .art1 h2{
-    margin-top: 2em;
     font-size: 30px;
 }
 
