@@ -1,0 +1,83 @@
+body{
+    background-image: url(images/lines.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+input, label{
+    display:block;
+    font-family: "Fragment Mono", sans-serif;
+}
+
+input{
+    margin-bottom: 1em;
+    padding: 6px 15px 6px 15px;
+    width: 64%;
+}
+
+input[type="text"]:focus {
+    border:1px solid #000000;
+    outline: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+}
+
+label{
+    text-transform: uppercase;
+    padding-bottom: 3px;
+}
+
+fieldset label, fieldset input{
+    display: inline;
+}
+
+fieldset label{
+    margin-bottom:1em;
+}
+
+h1{
+    font-family: "B612 Mono", sans-serif;
+    font-size: 100px;
+    margin: unset;
+    color: rgb(119, 161, 224);
+}
+
+#h11{
+    position: relative;
+    top:-90px;
+}
+
+#h12{
+    position: absolute;
+    bottom:-60px;
+    right:0;
+}
+
+h2{
+    font-family: "B612 Mono", sans-serif;
+    font-size:20px;
+    background-color:rgb(247, 244, 237);
+    padding: 1em;
+    margin-top: 30%;
+    width: 70%;
+}
+
+#send-form{
+    background-color:rgb(76, 122, 136);
+    color: white;
+}
+
+section{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+form{
+    animation: popup 0.5s ease-in-out;
+}
+
+@keyframes popup{
+    0% {transform:scale(0);}
+    90%{transform: scale(1.1);}
+    100% {transform:scale(1);}
+}
