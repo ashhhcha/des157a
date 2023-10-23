@@ -4,7 +4,6 @@ h1, h2, date{
 
 h1{
     text-align: center;
-    padding: 2em;
     margin:unset;
 }
 
@@ -12,11 +11,30 @@ h2{
     margin-top: unset;
 }
 
-p, a{
+p, a, time{
     font-family: "Work Sans", san-serif;
 }
 
-.main{
+header p{
+    text-align: center;
+    margin: 1em;
+    color:rgb(76, 76, 76)
+}
+
+.main a{
+   background-color: gray; 
+   border-radius: 10px;
+   padding:6px 15px 6px 15px;
+   color: white;
+   text-decoration: none;
+   margin-top:12px;
+}
+
+.main a:hover{
+    background-color: rgb(55, 55, 55); 
+}
+
+.main2{
     width: 33%;
     border: solid rgb(52, 52, 52);
     padding: 1em;
@@ -24,7 +42,6 @@ p, a{
     border-radius: 8px;
     box-shadow: 0px 2px 26px -3px rgba(0,0,0,0.1);
     /* transition: 1s ease; */
-
 }
 
 /* .main:hover{
@@ -32,33 +49,38 @@ p, a{
     box-shadow: 0px 2px 30px -3px rgba(0,0,0,0.15);
 } */
 
-section{
+
+
+.main{
     display: flex;
     margin:auto;
-    margin-top: 20px;
+    margin-top: 3em;
     width: 85%;
+    justify-content: center;
 }
 
-.art1{
+.art{
     width: 45%;
     margin: auto;
     padding: 3em;
 
     margin-top: 2em;
     background-color: rgb(245, 236, 220);
-
 }
 
-.art1 p{
+.art p{
     font-size:18px;
 }
 
-.art1 h2{
+.art h2{
     font-size: 30px;
 }
 
+
 header{
     background-image: linear-gradient(to right bottom, #f9f0c7, #f5e7ba, #f1dead, #eed5a1, #ebcc95, #ecc98d, #ecc685, #edc37d, #f1c576, #f5c86f, #f8ca67, #fbcd5f);
+    padding: 3em;
+    
 }
 
 body{
