@@ -3,6 +3,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
+    overflow: hidden;
 }
 
 input, label{
@@ -22,8 +23,11 @@ input[type="text"]:focus {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
-label{
+label, #send-form{
     text-transform: uppercase;
+}
+
+label{
     padding-bottom: 3px;
 }
 
@@ -44,7 +48,7 @@ h1{
 
 #h11{
     position: relative;
-    top:-90px;
+    top:-70px;
 }
 
 #h12{
