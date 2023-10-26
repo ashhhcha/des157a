@@ -69,12 +69,13 @@ h2{
     background-color:rgb(247, 244, 237);
     padding: 1em;
     width: 70%;
-    ;
 }
 
-p{
+header p{
     font-family: "B612 Mono", sans-serif;
-    margin: 1em;    
+    margin: 1em;  
+    padding:1em;
+    background-color:rgb(247, 244, 237);
 }
 
 #send-form{
@@ -106,12 +107,14 @@ form{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding:3em;
+    padding:5em;
 }
 
 #madlib p{
     background-color:rgb(71, 69, 68);
     color: white;
+    font-family: 'B612 Mono', monospace;
+
 }
 
 .showing{
@@ -123,7 +126,6 @@ form{
 }
 
 .back{
-    margin:2em;
     background-color:rgb(76, 122, 136);
     color: white;
     padding: 6px 15px 6px 15px;
