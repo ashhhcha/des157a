@@ -1,5 +1,7 @@
 (function(){
     'use strict';
+    
+    console.log("reading js");
 
     const myForm = document.querySelector('#myForm');
     const alert = document.querySelector('#alert');
