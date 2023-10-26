@@ -8,7 +8,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=B612+Mono&family=Fragment+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=B612+Mono:wght@400;700&family=Fragment+Mono&display=swap" rel="stylesheet">
 
     <script src="script.js" defer> </script> 
 
@@ -20,28 +20,36 @@
     <h1 id="h12">Mad Libs</h1>
 
     <section>
+        <div id="overlay"  class="hidden">
+            <p id="madlib"></p>
+            <button class="back">back</button>
+        </div>
         <header>
             <h2>Fill in the blanks to write your own story!</h2>
+            <p id="alert"></p>
         </header>
         <article>
-            <form>
-                <label for = "verb">Verb</label>
-                <input type = "text" id="verb" required>
-
-                <label for = "adj1">Adjective</label>
-                <input type = "text" id="adj1" required>
-
-                <label for = "noun1">Noun</label>
-                <input type = "text" id="noun1" required>
-                
+            <form id="myForm">
                 <label for = "verbing">Verb ending in -ing</label>
-                <input type = "text" id="verbing" required>
+                <input type = "text" id="verbing">
 
-                <label for = "adj2">Adjective</label>
-                <input type = "text" id="adj2" required>
+                <label for = "verb1">verb</label>
+                <input type = "text" id="verb1">
 
-                <label for = "noun2">Noun</label>
-                <input type = "text" id="noun2" required>
+                <label for = "emotion">emotion</label>
+                <input type = "text" id="emotion">
+                
+                <label for = "animal">animal</label>
+                <input type = "text" id="animal">
+
+                <label for = "food">food</label>
+                <input type = "text" id="food">
+
+                <label for = "bodyPart">Body part</label>
+                <input type = "text" id="bodyPart">
+
+                <label for = "verb2">Verb</label>
+                <input type = "text" id="verb2">
 
                 <input type="submit" name="submit" id="send-form" value="create my story!">
             </form>
