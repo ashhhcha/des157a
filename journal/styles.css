@@ -11,7 +11,7 @@ h2{
     margin-top: unset;
 }
 
-p, a, time{
+p, a, time, figcaption{
     font-family: "Work Sans", san-serif;
 }
 
@@ -49,8 +49,6 @@ header p{
     box-shadow: 0px 2px 30px -3px rgba(0,0,0,0.15);
 } */
 
-
-
 .main{
     display: flex;
     margin:auto;
@@ -76,11 +74,9 @@ header p{
     font-size: 30px;
 }
 
-
 header{
     background-image: linear-gradient(to right bottom, #f9f0c7, #f5e7ba, #f1dead, #eed5a1, #ebcc95, #ecc98d, #ecc685, #edc37d, #f1c576, #f5c86f, #f8ca67, #fbcd5f);
     padding: 3em;
-    
 }
 
 body{
