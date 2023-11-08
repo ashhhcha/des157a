@@ -82,3 +82,8 @@ header{
 body{
     margin: unset;
 }
+
+.main:last-of-type{
+    margin-top:unset;
+    margin-bottom:3em;
+}
