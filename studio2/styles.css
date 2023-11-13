@@ -75,6 +75,7 @@ section img{
     display:block;
 }
 
+/* overlay for the animals' information */
 #moonjelly, #purplestrippedjelly, #cownoseray, #leopardsharks, #japaneseseanettle{
     position: absolute;
     background-color:rgb(0, 18, 44);
@@ -104,22 +105,26 @@ section img{
     transform: translate(295%, -50%);
 }
 
+/* zoom into images when clicked on */
 .zoomIn{
     transform: scale(1.25);
     top: 0;
     left: 0;
 }
 
+/* initial fade in for the webpage */
 @keyframes fadeIn{
     0% {opacity:0;}
     100% {opacity:1;}
 }
 
+/* swipe/click icon animation moving up and down */
 @keyframes bob{
     0%, 100% {transform:translateY(0);}
     50% {transform:translateY(-8px);}
 }
 
+/* changing gradients in the left background */
 @keyframes back{
     0%, 100% {background-image: url(images/back1.png);}
     50% {background-image: url(images/back2.png);}
