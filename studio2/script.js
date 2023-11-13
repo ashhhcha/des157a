@@ -21,7 +21,6 @@
     const button = document.querySelectorAll('button');
     const body = document.querySelector('body');
 
-
     body.style.overflow = 'auto';
 
     for (let i=0; i<jellies.length; i++){
@@ -34,7 +33,6 @@
               behavior: 'smooth'
             });
             body.style.overflow = 'hidden';
-            
         });
 
         button[i].addEventListener('click', function(){
