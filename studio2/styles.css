@@ -1,9 +1,49 @@
-body{
-    background-image: url(images/back1.png);
+#enter{
+    position: fixed;
+    background-image:url(images/cave.jpg);
+    background-position: center;
+    background-size:cover;
     background-repeat: no-repeat;
-    animation: fadeIn 2s, back 6s linear infinite;
+    color: white;
+    width:100%;
+    height:100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    text-align: center;
+    overflow-x:hidden;
+}
+
+.animate{
+    animation: fadeOut 1s ease forwards;
+}
+
+#enter h1{
+    width:30%;
+    font-size: 64px;
+    margin:auto;
+    padding-bottom:8px;
+    animation: bob 3s ease infinite, slideUp 1.2s ease;
+}
+
+#enter article{
+    padding-top:20%;
     overflow:hidden;
+}
+
+#enter button{
+    animation: slideUp 1.5s ease;
+}
+
+body{
+    background-repeat: no-repeat;
+    animation: back 6s linear infinite;
     background-color:rgb(0, 1, 32);
+}
+
+#intro{
+    animation: fadeIn 2s;
 }
 
 h1, h2{
@@ -11,9 +51,10 @@ h1, h2{
     letter-spacing: 2px;
 }
 
-h2{
+#info h2{
     margin-bottom: 3px;
     font-size: 30px;
+    animation: slideUp 0.8s ease, fadeIn 1s ease;
 }
 
 header h1{
@@ -22,16 +63,37 @@ header h1{
     width: 100%;
     text-align: center;
     color:white;
+    margin-top:2em;
 }
-
-p, button{
+p, .back, #pressEnter{
     font-family: 'Geologica', sans-serif;
 }
 
-button{
-    padding: 4px 8px;
+#info > article > p{
+    animation: slideUp 1s ease, fadeIn 1s ease;
+}
+
+#info > article > .back{
+    animation: slideUp 1.2s ease, fadeIn 1s ease;
+}
+
+#info > article{
+    overflow:hidden;
+}
+
+.back, #pressEnter{
+    padding: 6px 12px;
     background-color: rgb(49, 64, 106);
     color:white;
+    cursor:pointer;
+    border-radius:10px;
+    border:none;
+    transition: 1s;
+    margin-top: 5px;
+}
+
+.back:hover, #pressEnter:hover{
+    background-color: rgb(96, 121, 190);
 }
 
 header p{
@@ -61,6 +123,11 @@ section img{
     height:auto;
     margin: 1em 3em;
     transition: 2s;
+    cursor:pointer;
+}
+
+img:hover{
+    transform: scale(1.1);
 }
 
 #info article{
@@ -112,22 +179,45 @@ section img{
     left: 0;
 }
 
-/* initial fade in for the webpage */
+/* initial fade in for the page */
 @keyframes fadeIn{
     0% {opacity:0;}
     100% {opacity:1;}
 }
 
+@keyframes fadeOut{
+    0% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(80px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
 /* swipe/click icon animation moving up and down */
 @keyframes bob{
-    0%, 100% {transform:translateY(0);}
-    50% {transform:translateY(-8px);}
+    0%, 100% {transform:translateY(-8px);}
+    50% {transform:translateY(0px);}
 }
 
 /* changing gradients in the left background */
 @keyframes back{
-    0%, 100% {background-image: url(images/back1.png);}
-    50% {background-image: url(images/back2.png);}
+    0%, 100% {background-image: url(images/back1.jpg);}
+    50% {background-image: url(images/back2.jpg);}
+}
+
+@keyframes zoom{
+    0%{
+        transform:scale(1);
+    }
+    100%{
+        transform:scale(50);
+    }
 }
 
 @media screen and (min-width: 500px){

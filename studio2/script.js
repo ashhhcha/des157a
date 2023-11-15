@@ -1,6 +1,6 @@
 (function(){
     'use strict'
-
+    console.log('reading js');
 
     const jellies = [
         document.querySelector('#moon'),
@@ -20,8 +20,18 @@
 
     const button = document.querySelectorAll('button');
     const body = document.querySelector('body');
+    const image = document.querySelector('img');
+    
+    const enterButton = document.querySelector('#pressEnter');
+    const enter = document.querySelector('#enter');
 
-    body.style.overflow = 'auto';
+    body.style.overflow = 'hidden';
+
+    enterButton.addEventListener('click', function(){
+        enter.className='animate';
+        enter.className= 'hidden';
+        body.style.overflow = 'auto';
+    });
 
     for (let i=0; i<jellies.length; i++){
         jellies[i].addEventListener('click', function(){
@@ -33,6 +43,8 @@
               behavior: 'smooth'
             });
             body.style.overflow = 'hidden';
+            image[i].style.transform = '';
+            image[i].style.transform = 'scale(1.25)';
         });
 
         button[i].addEventListener('click', function(){
@@ -44,9 +56,8 @@
         document.addEventListener('click', function(e){
             if(!jellies[i].contains(e.target)){
                 info[i].className = 'hidden';
-                jellies[i].className = '';
+                jellies[i].className = '';                
             }
         });
     };
-
 })();
