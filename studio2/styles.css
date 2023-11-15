@@ -185,11 +185,13 @@ img:hover{
     100% {opacity:1;}
 }
 
+/**/
 @keyframes fadeOut{
     0% {opacity:1;}
     100% {opacity:0;}
 }
 
+/*text animation to slide up*/
 @keyframes slideUp {
     0% {
         transform: translateY(80px);
