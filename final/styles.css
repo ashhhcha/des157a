@@ -1,0 +1,40 @@
+body{
+    width:40%;
+    margin:auto;
+}
+
+h1{
+    font-size: 40px;
+    font-family: 'Barlow', sans-serif;
+}
+
+h2{
+    font-size: 30px;
+    font-family: 'Barlow', sans-serif;
+}
+
+p{
+    font-size:21px;
+    font-family: 'DM Sans', sans-serif;
+}
+
+article{
+    margin:4em 0;
+}
+
+img{
+    width:50%;
+    border-radius:8px;
+    display:flex;
+    margin:auto;
+}
+
+div{
+    background-color:rgb(209, 209, 221);
+    border-radius:16px;
+}
+
+img:first-of-type{
+    width:100%;
+    margin-top:5em;
+}
