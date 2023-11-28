@@ -33,8 +33,3 @@ div{
     background-color:rgb(209, 209, 221);
     border-radius:16px;
 }
-
-img:first-of-type{
-    width:100%;
-    margin-top:5em;
-}
