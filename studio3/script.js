@@ -19,6 +19,7 @@
 
         let myText = '';
 
+        //the form to let the users name their characters/rats
         if (rat1 == ''){
             myText = 'Please provide a name for rat 1!';
             document.querySelector('#rat1').focus();
@@ -28,6 +29,7 @@
         } else {
             document.querySelector('#intro').className = 'hidden';
             document.querySelector('#play').className = 'showing';
+            //display the rules of the game
             explain.innerHTML = `<p>In the big city of New York, <strong>${rat1}</strong> and <strong>${rat2}</strong> are rats scrambling to reach the largest slice of pizza on the subway floor.</p> <p>The goal of the game? Be the first rat to get to the pizza by advancing your steps based on the total number each rat rolls.</p> 
             <p>However, beware of the cat lurking around! If a one comes up on either pizza, the turn is ended. If both pizza are ones, you've been caught by the cat, and your score returns to zero.</p>`;
 
@@ -35,7 +37,7 @@
                 playTap();
                 document.querySelector('#rules').className = 'hidden';
                 document.querySelector('#start').className = 'showing';
-                start
+                //begin with the game
                 setUpTurn();            
             });
 
@@ -62,18 +64,21 @@
     const actionArea = document.querySelector('#actions');
 
     startGame.addEventListener('click', function(){
+        //randomly select player to start
         gameData.index = Math.round(Math.random());
         console.log(gameData.index);
         setUpTurn();            
     });
 
     function setUpTurn(){
+        //the game where the player gets to toss the dice
         game.innerHTML = `<p>Roll the pizza for ${ gameData.players[gameData.index] }</p>`;
         actionArea.innerHTML = '<button id="roll">roll the pizza</button>';
         document.querySelector('#score').className = 'hidden';
         document.querySelector('#brat').innerHTML = `<h2>${rat1}</h2> <img src="images/brat.png" alt= "brown rat">`;
         document.querySelector('#grat').innerHTML = `<h2>${rat2}</h2> <img src="images/grat.png" alt= "gray rat">`;
 
+        //when clicking the roll button, a sound is played and the dice is tossed  
         document.getElementById('roll').addEventListener('click', function(){
             throwDice();
             playRun();
@@ -82,13 +87,13 @@
     };
 
     function throwDice(){
+        //tossing the dice, shows players scores and the numbers on the dice/pizza
         actionArea.innerHTML = '';
         gameData.roll1 = Math.floor(Math.random()*6)+1;
         gameData.roll2 = Math.floor(Math.random()*6)+1;
         game.innerHTML=`<p>Roll the pizza for ${gameData.players[gameData.index]}</p>`;
         game.innerHTML += `<article id="pizzaDice"><img src = "${gameData.dice[gameData.roll1-1]}">  <img src = "${gameData.dice[gameData.roll2-1]}"></article>`;
         gameData.rollSum = gameData.roll1 + gameData.roll2;
-        //console.log(gameData.rollSum);
 
         if (gameData.rollSum === 2){
             game.innerHTML += '<p>You have been caught by the cat!</p>';
@@ -118,6 +123,7 @@
         checkWinningCondition();
     };   
 
+    //seeing if either player meets the conditions to win the game
     function checkWinningCondition(){
         if (gameData.score[gameData.index] > gameData.gameEnd){
             score.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points</h2>`;
@@ -133,15 +139,17 @@
         }
     }
 
+    //showing current score at the bottom of the page for both players
     function showCurrentScore(){
         score.innerHTML = `<p>the score for ${gameData.players[0]} is <strong> ${gameData.score[0]} </strong> and the score for ${gameData.players[1]} is <strong> ${gameData.score[1]} </strong> </p>`;
     }
 
-
+    //a tap sound when clicking a button
     function playTap() {
         const audio = new Audio('sounds/tap.m4a'); 
         audio.play();
     }
+    //dice roll sound when clicking to roll the dice/pizza
     function playRun() {
         const audio = new Audio('sounds/run.m4a'); 
         audio.play();
