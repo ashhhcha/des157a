@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" referrerpolicy="no-referrer"> -->
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,19 +19,19 @@
     <div id="background"></div>
 
     <section id="intro">
-        <img id="rat" src="images/rat.png" alt="brown rat with long tail" width="94" height="168">
+        <img id="rat" src="images/rat.gif" alt="brown rat with long tail" width="94" height="168">
 
         <h1>The Remy Race</h1>
-        <p>Name your rat</p>
+        <h2>Name your rat</h2>
         <p id="alert"></p>
         <article>
             <form id="myForm">
-                <label for = "rat1">Name Rat 1</label>
+                <label for = "rat1"> Rat 1</label>
                 <input type = "text" id="rat1">
 
-                <label for = "rat2">Name Rat 2</label>
+                <label for = "rat2"> Rat 2</label>
                 <input type = "text" id="rat2">
-                <input type="submit" name="submit" id="readRules" value="read the rules!">
+                <input type="submit" name="submit" id="readRules" value="read the rules">
             </form>
         </article>
     </section>
@@ -44,12 +44,14 @@
         
     </section>
     <section id="start" class="hidden">
-        <div id="progressBar1"></div>
-        <div id="progressBar2"></div>
         <div id="pizza"></div>
         <div id="game"></div>
         <div id="actions"></div>
         <div id="score"></div>
+        <div id="quit"></div>
+        <div id="brat"></div>
+        <div id="grat"></div>
+
     </section>
 </body>
 </html>
