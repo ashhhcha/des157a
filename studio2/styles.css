@@ -64,6 +64,7 @@ header h1{
     text-align: center;
     color:white;
     margin-top:2em;
+    /* absolute positioning */
 }
 p, .back, #pressEnter{
     font-family: 'Geologica', sans-serif;

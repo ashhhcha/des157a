@@ -1,4 +1,4 @@
-body{
+#brief{
     width:40%;
     margin:auto;
 }
@@ -22,7 +22,7 @@ article{
     margin:4em 0;
 }
 
-img{
+.photo {
     width:50%;
     border-radius:8px;
     display:flex;
@@ -32,4 +32,22 @@ img{
 div{
     background-color:rgb(209, 209, 221);
     border-radius:16px;
+}
+
+#descom{
+    width:100%;
+}
+
+#layers{
+    width:50%;
+}
+
+#processwork h1{
+    text-align:center;
+}
+
+#processwork p{
+    width:50%;
+    margin:auto;
+    padding:2em;
 }
