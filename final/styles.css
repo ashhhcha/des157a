@@ -42,12 +42,18 @@ div{
     width:50%;
 }
 
-#processwork h1{
+.processwork h1{
     text-align:center;
 }
 
-#processwork p{
+.processwork p{
     width:50%;
     margin:auto;
     padding:2em;
+}
+
+.processwork h2{
+    width:50%;
+    margin:auto;
+    padding-top:1em;
 }
