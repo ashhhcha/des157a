@@ -97,12 +97,9 @@ p, .back, #pressEnter{
     background-color: rgb(96, 121, 190);
 }
 
-header p{
-    margin-top: 4em;
-    font-size: 30px;
-}
-
-header p:last-of-type{
+header div{
+    display: flex;
+    justify-content: center;
     font-size:1em;
     color: rgb(54, 54, 54);
     background-color: rgb(229, 229, 229);
@@ -111,6 +108,18 @@ header p:last-of-type{
     margin:auto;
     padding:8px 16px;
     animation: bob 3s linear infinite;
+    width:60%;
+}
+
+#arrow{
+    width:20%;
+    height:2%;
+    margin: auto 0;
+    padding-left:10px;
+}
+
+header div p {
+    margin:unset;
 }
 
 header{
@@ -180,6 +189,7 @@ img:hover{
     left: 0;
 }
 
+
 /* initial fade in for the page */
 @keyframes fadeIn{
     0% {opacity:0;}
@@ -223,7 +233,7 @@ img:hover{
 }
 
 @media screen and (min-width: 500px){
-    #intro article{
+    #intro .animals{
         display: flex;
         width:25%;
     }
