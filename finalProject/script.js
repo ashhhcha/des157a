@@ -27,9 +27,8 @@
         'images/6.svg',
     ]
 
-    const delay = 3000;
 
-    const button = document.querySelectorAll('button');
+    const button = document.querySelectorAll('.back');
     const body = document.querySelector('body');
     const image = document.querySelector('img');
     const tap = document.querySelector('#learn');
@@ -40,19 +39,13 @@
     body.style.overflow = 'hidden';
 
     enterButton.addEventListener('click', function(){
-        for (let i = 1; i <= 6; i++) {
-            setTimeout(function() {
-            const layerElement = document.querySelector('.layer' + i);
-            layerElement.classList.add('animate');
-            }, (i - 1) * delay);
-           }
         body.style.overflow = 'auto';
-
         enter.className = "animate";
         setTimeout(function() {
             enter.style.zIndex = '-10';
            }, 1000);
         intro.style.zIndex = "3";
+
     });
 
     for (let i=0; i<jellies.length; i++){
@@ -70,15 +63,18 @@
 
         button[i].addEventListener('click', function(){
             info[i].className = 'hidden';
-            jellies[i].className = '';
+            jellies[i].classList.remove('zoomIn');
             body.style.overflow = '';
             tap.className = 'showing';
+            console.log('reading');
         });
 
         document.addEventListener('click', function(e){
-            if(!jellies[i].contains(e.target)){
+            for (let i=0; i<jellies.length; i++){
+                if(!jellies[i].contains(e.target)){
                 info[i].className = 'hidden';
-                jellies[i].className = '';                
+                jellies[i].className = '';     
+              }
             }
         });
     };
